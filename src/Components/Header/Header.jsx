@@ -13,11 +13,11 @@ function Header() {
             <Link to='/' className='uppercase font-bold text-5xl text-white hidden md:block'>AssortedLayer</Link>
           </div>
           <div>
-            <Link to='about' className='font-medium text-3xl text-white'>About</Link>
+            <Link to='/about' className='font-medium text-3xl text-white'>About</Link>
           </div>
         </nav>
           <div className='w-100 border bg-white opacity-15'></div>
-      </header>
+    </header>
   )
 }
 

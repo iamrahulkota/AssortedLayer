@@ -5,7 +5,7 @@ function Card({heading, description, category}) {
     <>
         <div className='bg-[#121212] p-5 w-[300px] h-96 my-4 mx-3'>
             <div className=''>
-
+                
             </div>
             <div className=''>
                 <h1 className='font-medium text-3xl text-white'>{heading}</h1>

@@ -16,7 +16,7 @@ function Footer() {
           <div className='md:flex font-medium'>
 
               <div className='px-6'>  
-                  <Link to='about' className='text-white py-1'>About</Link><br></br>
+                  <Link to='/about' className='text-white py-1'>About</Link><br></br>
                   <Link to='' className='text-white py-1'>Support this project </Link>
               </div>  
               <div className='px-6'>  
