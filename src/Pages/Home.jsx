@@ -46,6 +46,11 @@ function Home() {
       description : "An independent digital typeface foundry and graphic design studio.",
       category : "Typography"
     },
+    {
+      heading : "Temp",
+      description : "Temp",
+      category : "Typography"
+    },
 
   ]
 
