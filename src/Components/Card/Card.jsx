@@ -3,7 +3,7 @@ import React from 'react'
 function Card({heading, description, category, imgUrl, tags}) {
   return (
     <>
-        <div className='bg-[#121212] w-[372px] h-[550px] my-4 mx-3 flex flex-col justify-between border-4 border-[#878787] border-opacity-10 rounded-3xl hover:cursor-pointer '>
+        <div className='bg-[#121212] w-[372px] h-[550px] my-4 mx-3 flex flex-col justify-between border-4 border-[#878787] border-opacity-10 rounded-3xl hover:cursor-pointer hover:border-opacity-50'>
             <div className='my-auto px-10'>
                 <img src={imgUrl} alt={heading} className='rounded-xl'/>
             </div>
