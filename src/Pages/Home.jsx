@@ -1,34 +1,71 @@
-import React, { useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import HomeLayout from '../Layout/HomeLayout'
 import About from './About'
 import { useParams } from 'react-router-dom';
 import Card from '../Components/Card/Card';
 import cardItems from '../Components/cardItems';
-
+import Tools from '@/Components/Data/Tools';
+import BasicTabs from '@/Components/Tabs';
 function Home() {
 
-  const [selectedType, setSelectedType] = useState("All")
+  // const [selectedType, setSelectedType] = useState("All")
 
-  const buttons = [
-    { id: 1, name: 'All'},
-    { id: 2, name: 'Tools'},
-    { id: 3, name: 'Resources' },
-    { id: 4, name: 'Technologies' },
-    { id: 5, name: 'Upskilling' },
-    { id: 6, name: 'Inspiration' },
-    { id: 6, name: 'Typography' },
-  ];
+  // const buttons = [
+  //   { id: 1, name: 'All'},
+  //   { id: 2, name: 'Tools'},
+  //   { id: 3, name: 'Resources' },
+  //   { id: 4, name: 'Technologies' },
+  //   { id: 5, name: 'Upskilling' },
+  //   { id: 6, name: 'Inspiration' },
+  //   { id: 6, name: 'Typography' },
+  // ];
 
-  console.log(buttons)
+  // console.log(buttons)
 
 
 
-  const handleClick = (BtnName)=>{
-    setSelectedType(BtnName)
-    console.log(BtnName)
-  } 
+  // const handleClick = (BtnName)=>{
+  //   setSelectedType(BtnName)
+  //   console.log(BtnName)
+  // } 
 
-  const filteredCards = selectedType === "All" ? cardItems : cardItems.filter(card => card.category === selectedType)
+  // const filteredCards = selectedType === "All" ? cardItems : cardItems.filter(card => card.category === selectedType)
+
+  const [value, setValue] = useState(0);
+
+  
+
+  const routingtabs = useMemo(() => [
+    {
+        label: "Tools",   
+        content: <Tools />
+    },
+    {
+        label: "Resources",
+        content: <>Hi</>
+    },
+    {
+      label: "Technologies",
+      content: <>Technologies</>
+    },
+    {
+      label: "Upskilling",
+      content: <>Upskilling</>
+    },  
+    {
+      label: "Typography",
+      content: <>Typography</>
+    },  
+  ], []);
+
+
+    useEffect(() => {
+        routingtabs?.map((tab, i) => {
+            if (location.pathname.split('/').includes(tab.label.toLowerCase())) {
+                setValue(i)
+            }
+        })
+    }, [routingtabs, location.pathname])
 
 
   return (
@@ -39,33 +76,28 @@ function Home() {
               <p className='mx-auto text-center text-lg lg:text-xl my-16'>Streamline Your Workflow & Cultivate Expertise, Access <br></br>
               a Collection of Handpicked Resources for Developers & Designers</p>
           </div>
-        
 
-        <div className='mx-auto bg-[#121212] py-4 px-10 rounded-lg flex w-full md:w-8/12 mb-24 flex-wrap'>
-              {buttons.map((eachButton)=>(
-                <button 
-                  className={`mx-auto font-medium rounded-sm px-6 py-2 hover:bg-white hover:text-black 
-                    ${selectedType === eachButton.name ? 'bg-white text-black' : 'text-white'}
-                  `} 
-                  key={eachButton.id} 
-                  onClick={()=> handleClick(eachButton.name)}>
-                  {eachButton.name}
-                </button>
-              ))}
-        </div>
-        
-
-        <div className='flex flex-wrap justify-center'>
-          {filteredCards.map((item)=>(
-            <Card heading={item?.heading} description={item?.description} category={item?.category} imgUrl={item?.imgUrl} tags={item?.tags} websiteUrl={item?.websiteUrl}/>
-          ))}
-          
-        </div>
+          <BasicTabs
+            value={value}
+            setValue={setValue}
+            tabData={routingtabs?.map((tab, i) => {
+              return {
+                  label: tab.label,
+                  route: tab.label.toLowerCase(),
+                  content: tab.content
+              };
+            })}
+            tabStyle={{
+                selectedBg: '#FFF',
+                selectedColor: '#000',
+                bg: '#000',
+                width: "200px"
+              }}
+          />
+      
 
     </HomeLayout>
   )
 }
 
 export default Home
-
-// 
