@@ -7,6 +7,7 @@ import cardItems from '../Components/cardItems';
 import Tools from '@/Components/TabComponments/Tools';
 import BasicTabs from '@/Components/Tabs';
 import Resources from '@/Components/TabComponments/Resources';
+import Inspiration from '@/Components/TabComponments/Inspiration';
 function Home() {
 
   // const [selectedType, setSelectedType] = useState("All")
@@ -44,6 +45,10 @@ function Home() {
     {
         label: "Resources",
         content: <Resources />
+    },
+    {
+      label: "Inspiration",
+      content: <Inspiration />
     },
     {
       label: "Technologies",

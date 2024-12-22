@@ -3,6 +3,7 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Tools from './Components/TabComponments/Tools'
 import Resources from './Components/TabComponments/Resources'
+import Inspiration from './Components/TabComponments/Inspiration'
 
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
             <Route path="resources">
               <Route index element={<Resources /> } />
             </Route>
-            <Route path="technologies">
-              <Route index element={<Tools /> } />
+            <Route path="resources">
+              <Route index element={<Resources /> } />
+            </Route>
+            <Route path="inspiration">
+              <Route index element={<Inspiration /> } />
             </Route>
             <Route path="upskilling">
               <Route index element={<Tools /> } />
