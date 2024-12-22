@@ -4,8 +4,9 @@ import About from './About'
 import { useParams } from 'react-router-dom';
 import Card from '../Components/Card/Card';
 import cardItems from '../Components/cardItems';
-import Tools from '@/Components/Data/Tools';
+import Tools from '@/Components/TabComponments/Tools';
 import BasicTabs from '@/Components/Tabs';
+import Resources from '@/Components/TabComponments/Resources';
 function Home() {
 
   // const [selectedType, setSelectedType] = useState("All")
@@ -42,7 +43,7 @@ function Home() {
     },
     {
         label: "Resources",
-        content: <>Hi</>
+        content: <Resources />
     },
     {
       label: "Technologies",

@@ -1,7 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import Tools from './Components/Data/Tools'
+import Tools from './Components/TabComponments/Tools'
+import Resources from './Components/TabComponments/Resources'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
               <Route index element={<Tools /> } />
             </Route>
             <Route path="resources">
-              <Route index element={<Tools /> } />
+              <Route index element={<Resources /> } />
             </Route>
             <Route path="technologies">
               <Route index element={<Tools /> } />
