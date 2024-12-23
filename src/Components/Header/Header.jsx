@@ -5,7 +5,7 @@ import Logo from '../../Images/AssortedLayerLogoWhite.png'
 function Header() {
   return (
     <header>
-        <nav className='flex justify-between py-10'>
+        <nav className='flex justify-between py-6 md:py-10'>
           <div className='flex'>
             <Link to='/'>
               <img src={Logo} width='35px' className='mt-2 mr-5' />

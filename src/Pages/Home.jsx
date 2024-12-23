@@ -8,6 +8,8 @@ import Tools from '@/Components/TabComponments/Tools';
 import BasicTabs from '@/Components/Tabs';
 import Resources from '@/Components/TabComponments/Resources';
 import Inspiration from '@/Components/TabComponments/Inspiration';
+import Typography from '@/Components/TabComponments/Typography';
+import YTChannels from '@/Components/TabComponments/YTChannels';
 function Home() {
 
   // const [selectedType, setSelectedType] = useState("All")
@@ -51,8 +53,8 @@ function Home() {
       content: <Inspiration />
     },
     {
-      label: "Technologies",
-      content: <>Technologies</>
+      label: "YT-Channels",
+      content: <YTChannels />
     },
     {
       label: "Upskilling",
@@ -60,7 +62,7 @@ function Home() {
     },  
     {
       label: "Typography",
-      content: <>Typography</>
+      content: <Typography />
     },  
   ], []);
 
