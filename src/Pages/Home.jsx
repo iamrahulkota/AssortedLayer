@@ -44,10 +44,10 @@ function Home() {
         label: "Tools",   
         content: <Tools />
     },
-    {
-        label: "Resources",
-        content: <Resources />
-    },
+    // {
+    //     label: "Resources",
+    //     content: <Resources />
+    // },
     {
       label: "Inspiration",
       content: <Inspiration />
@@ -56,10 +56,10 @@ function Home() {
       label: "YT-Channels",
       content: <YTChannels />
     },
-    {
-      label: "Upskilling",
-      content: <>Upskilling</>
-    },  
+    // {
+    //   label: "Upskilling",
+    //   content: <>Upskilling</>
+    // },  
     {
       label: "Typography",
       content: <Typography />

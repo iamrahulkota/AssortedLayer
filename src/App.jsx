@@ -17,12 +17,9 @@ function App() {
             <Route path="tools">
               <Route index element={<Tools /> } />
             </Route>
-            <Route path="resources">
+            {/* <Route path="resources">
               <Route index element={<Resources /> } />
-            </Route>
-            <Route path="resources">
-              <Route index element={<Resources /> } />
-            </Route>
+            </Route> */}
             <Route path="inspiration">
               <Route index element={<Inspiration /> } />
             </Route>

@@ -4,7 +4,7 @@ import HomeLayout from '../Layout/HomeLayout'
 function About() {
   return (
     <HomeLayout>
-      <div className='w-full flex flex-col md:flex-row p-20'>
+      <div className='w-full h-[65vh] flex flex-col md:flex-row p-20'>
         <div className='w-6/12 '>
           <span className='font-medium'>About /</span>
           <h1 className='text-6xl text-[#878787] font-medium'>AssortedLayer</h1>
@@ -15,7 +15,7 @@ function About() {
             Now, AssortedLayer is here to help others with the same issues. These resources are carefully chosen by me and other great contributors.</p>  
         </div>
       </div>
-      <div className='w-full flex flex-col md:flex-row p-20'>
+      {/* <div className='w-full flex flex-col md:flex-row p-20'>
         <div className='w-6/12 '>
           <span className='font-medium'>About /</span>
           <h1 className='text-6xl text-[#878787] font-medium'>@iamrahulkota</h1>
@@ -25,7 +25,7 @@ function About() {
               <br></br><br></br>
               Now, AssortedLayer is here to help others with the same issues. These resources are carefully chosen by me and other great contributors.</p>
         </div>
-      </div>
+      </div> */}
     </HomeLayout>
   )
 }
